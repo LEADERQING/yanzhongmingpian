@@ -1,0 +1,14 @@
+# iOS 端专用的忽略规则。
+# 仓库根的 .gitignore 管 Android 和通用部分，这里只管 ios/ 目录里的东西。
+
+# 构建产物（DerivedData、归档、未签名打包的临时目录）
+build/
+
+# 打包脚本输出的安装包
+dist/*.ipa
+
+# 苹果签名材料：绝对不要提交
+*.p12
+*.mobileprovision
+*.cer
+*.provisionprofile

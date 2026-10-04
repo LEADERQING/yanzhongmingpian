@@ -1,0 +1,12 @@
+# 换行符策略。不做这一步的话，build_ipa.sh 一旦被检出成 CRLF，
+# 在 Mac / 云端 macOS 机器上会因为 shebang 解析失败而无法执行。
+* text=auto eol=lf
+
+# 图标生成脚本在 Windows 上执行，保留 CRLF
+*.ps1 text eol=crlf
+
+# 二进制文件不做任何转换
+*.png binary
+*.ipa binary
+*.p12 binary
+*.mobileprovision binary
